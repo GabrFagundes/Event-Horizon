@@ -1,114 +1,245 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="campanhas.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="CSS/campanhas.css" />
     <title>Event Horizon - Agenda e Campanhas</title>
-</head>
-<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
     <header>
-        <div class="header-left">
-            <div class="logo">
-                <img src="IMG/eh_logo.png" alt="logo-do-site" width="40px">
-                <span>Event<br>Horizon</span>
-            </div>
-            <nav>
-            <a href="index.html">Home</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="workshop.html">Workshop</a>
-            <a href="comunidade.html">Comunidade</a>
-            <a href="campanhas.html">Campanhas</a>
-            <a href="login.html" class="login-btn">Home de Logins</a>
-            </nav>
+      <div class="header-left">
+        <div class="logo">
+          <img src="IMG/eh_logo.png" alt="logo-do-site" width="40px" />
+          <span>Event<br />Horizon</span>
         </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="eventos.html">Eventos</a>
+          <a href="workshop.html">Workshop</a>
+          <a href="comunidade.html">Comunidade</a>
+          <a href="campanhas.html">Campanhas</a>
+          <a href="login.html" class="login-btn">Home de Logins</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section class="calendar-section">
-            <div class="calendar-header">
-                <span class="agenda-label">agenda</span>
-                <span class="month-label">mes/ano</span>
-            </div>
-            <div class="calendar-grid">
-                <div class="calendar-day">01</div>
-                <div class="calendar-day">02</div>
-                <div class="calendar-day">03</div>
-                <div class="calendar-day">04</div>
-                <div class="calendar-day">05</div>
-                <div class="calendar-day">06</div>
-                <div class="calendar-day">07</div>
-                <div class="calendar-day">08</div>
-                <div class="calendar-day">09</div>
-                <div class="calendar-day">10</div>
-                <div class="calendar-day">11</div>
-                <div class="calendar-day">12</div>
-                <div class="calendar-day">13</div>
-                <div class="calendar-day">14</div>
-                <div class="calendar-day">15</div>
-                <div class="calendar-day">16</div>
-                <div class="calendar-day">17</div>
-                <div class="calendar-day">19</div>
-                <div class="calendar-day">20</div>
-                <div class="calendar-day">21</div>
-                <div class="calendar-day">22</div>
-                <div class="calendar-day">23</div>
-                <div class="calendar-day">24</div>
-                <div class="calendar-day">25</div>
-                <div class="calendar-day">26</div>
-                <div class="calendar-day">27</div>
-                <div class="calendar-day">28</div>
-                <div class="calendar-day">29</div>
-                <div class="calendar-day">30</div>
-            </div>
-        </section>
+      <section class="calendar-section">
+        <div class="calendar-header">
+          <span class="agenda-label">Agenda</span>
+          <span class="month-label">Mês / Ano</span>
+        </div>
+        <div class="calendar-grid">
+          <div class="calendar-day">01</div>
+          <div class="calendar-day">02</div>
+          <div class="calendar-day">03</div>
+          <div class="calendar-day">04</div>
+          <div class="calendar-day">05</div>
+          <div class="calendar-day">06</div>
+          <div class="calendar-day">07</div>
+          <div class="calendar-day">08</div>
+          <div class="calendar-day">09</div>
+          <div class="calendar-day">10</div>
+          <div class="calendar-day">11</div>
+          <div class="calendar-day">12</div>
+          <div class="calendar-day">13</div>
+          <div class="calendar-day">14</div>
+          <div class="calendar-day">15</div>
+          <div class="calendar-day">16</div>
+          <div class="calendar-day">17</div>
+          <div class="calendar-day">19</div>
+          <div class="calendar-day">20</div>
+          <div class="calendar-day">21</div>
+          <div class="calendar-day">22</div>
+          <div class="calendar-day">23</div>
+          <div class="calendar-day">24</div>
+          <div class="calendar-day">25</div>
+          <div class="calendar-day">26</div>
+          <div class="calendar-day">27</div>
+          <div class="calendar-day">28</div>
+          <div class="calendar-day">29</div>
+          <div class="calendar-day">30</div>
+        </div>
+      </section>
 
-        <section class="campaigns-section">
-            <div class="campaign-card">
-                <div class="campaign-header">
-                    <span class="campaign-title">Campanha 1</span>
-                    <span class="campaign-arrow">▶</span>
-                </div>
-            </div>
+<div class="form-container">
+  <h2>Lista de Campanhas</h2>
 
-            <div class="campaign-card">
-                <div class="campaign-header">
-                    <span class="campaign-title">Campanha 2</span>
-                    <span class="campaign-arrow">▶</span>
-                </div>
-            </div>
+  <div class="input-group">
+    <input id="nome" type="text" required>
+    <label>Nome</label>
+  </div>
 
-            <div class="campaign-card campaign-expanded">
-                <div class="campaign-header">
-                    <span class="campaign-title">Campanha 3</span>
-                    <span class="campaign-arrow">▼</span>
-                </div>
-                <div class="campaign-details">
-                    <p class="description">descricao: ........................</p>
-                    <p class="date">data: 00/00/00</p>
-                    <div class="campaign-buttons">
-                        <button class="btn btn-edit">editar</button>
-                        <button class="btn btn-start">iniciar</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+  <div class="input-group">
+    <input id="email" type="email" required>
+    <label>Descrição</label>
+  </div>
+
+  <div class="input-group">
+    <input type="date" id="data">
+  </div>
+
+  <button id="btnAdicionar">Adicionar</button>
+
+  <div id="listaUsuarios"></div>
+
+</div>
+
+</main>
 
     <footer>
-        <div class="footer-left">
-            <a href="#">ajuda</a>
-            <span class="separator">></span>
-            <a href="#">suporte</a>
-            <span class="separator">></span>
-            <a href="#">relatar erro</a>
-        </div>
-        <div class="footer-social">
-            <a href="#" class="social-icon">📷</a>
-            <a href="#" class="social-icon">🐦</a>
-            <a href="#" class="social-icon">🎮</a>
-        </div>
+      <div class="footer-left">
+        <a href="#">ajuda</a>
+        <span class="separator">></span>
+        <a href="#">suporte</a>
+        <span class="separator">></span>
+        <a href="#">relatar erro</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" class="social-icon">📷</a>
+        <a href="#" class="social-icon">🐦</a>
+        <a href="#" class="social-icon">🎮</a>
+      </div>
     </footer>
-</body>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Init: script de adicionar usuários ativo");
+
+  let btn = document.getElementById("btnAdicionar");
+  if(!btn){
+    btn = Array.from(document.querySelectorAll("button, input[type='button'], input[type='submit']"))
+      .find(el => (el.textContent || el.value || "").trim().toLowerCase() === "adicionar");
+  }
+  if(!btn){
+    console.warn("Botão 'Adicionar' não encontrado automaticamente. Verifique o id/texto do botão.");
+  } else {
+    console.log("Botão encontrado:", btn);
+  }
+
+  const nomeInput = document.getElementById("nome") || document.querySelector("input[placeholder*='Nome'], input[placeholder*='nome']");
+  const emailInput = document.getElementById("email") || document.querySelector("input[placeholder*='E-mail'], input[placeholder*='email']");
+  const dataInput = document.getElementById("data") || document.querySelector("input[type='date'], input[placeholder*='dd'], input[placeholder*='data']");
+
+  console.log("Inputs:", { nomeInput, emailInput, dataInput });
+
+  let lista = document.getElementById("listaUsuarios");
+  if(!lista){
+    const formPanel = document.querySelector(".form-panel") || document.querySelector("form") || document.getElementById("form");
+    lista = document.createElement("div");
+    lista.id = "listaUsuarios";
+    lista.style.marginTop = "20px";
+    if(formPanel && formPanel.parentNode){
+      formPanel.parentNode.insertBefore(lista, formPanel.nextSibling);
+      console.log("Container #listaUsuarios criado e inserido após form panel.");
+    } else {
+      document.body.appendChild(lista);
+      console.log("Container #listaUsuarios criado no final do body.");
+    }
+  } else {
+    console.log("Container #listaUsuarios encontrado.");
+  }
+
+  function criarCard(nome, email, data){
+    const card = document.createElement("div");
+    card.className = "user-card";
+    if(!document.querySelector('style[data-user-card]')){
+      const s = document.createElement('style');
+      s.setAttribute('data-user-card','1');
+      s.textContent = `
+        #listaUsuarios { width:100%; }
+        .user-card { background:#250046; border:2px solid #ff00ff; padding:12px; border-radius:10px; color:#fff; display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+        .user-card .botoes button { background:#ff00ff; border:none; padding:8px 10px; border-radius:8px; cursor:pointer; margin-left:8px; }
+      `;
+      document.head.appendChild(s);
+    }
+
+    let dataLabel = data || "";
+    if(/^\d{4}-\d{2}-\d{2}$/.test(data)){
+      const p = data.split("-");
+      dataLabel = `${p[2]}/${p[1]}/${p[0]}`;
+    }
+
+    card.innerHTML = `
+      <div>
+        <strong>${escapeHtml(nome)}</strong><br>
+        <span class="email">${escapeHtml(email)}</span><br>
+        <span class="data">Data: ${escapeHtml(dataLabel)}</span>
+      </div>
+      <div class="botoes">
+        <button class="editar" title="Editar">✏️</button>
+        <button class="excluir" title="Deletar">🗑️</button>
+      </div>
+    `;
+
+    card.querySelector(".excluir").addEventListener("click", () => card.remove());
+
+    card.querySelector(".editar").addEventListener("click", () => {
+      if(nomeInput) nomeInput.value = nome;
+      if(emailInput) emailInput.value = email;
+      if(dataInput) dataInput.value = data || "";
+      card.remove();
+      if(nomeInput) nomeInput.focus();
+    });
+
+    return card;
+  }
+
+  function escapeHtml(text){
+    if(text === undefined || text === null) return "";
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+function handleAdicionar(ev){
+  if(ev && typeof ev.preventDefault === "function") ev.preventDefault();
+
+  const nome = nomeInput ? nomeInput.value.trim() : "";
+  const email = emailInput ? emailInput.value.trim() : "";
+  const data = dataInput ? dataInput.value.trim() : "";
+
+  if(nome === "" || email === "" || data === ""){
+    alert("Preencha Nome, E-mail e Data antes de adicionar.");
+    return;
+
+  const card = criarCard(nome, email, data);
+  lista.appendChild(card);
+
+  // limpar campos
+  if(nomeInput) nomeInput.value = "";
+  if(emailInput) emailInput.value = "";
+  if(dataInput) dataInput.value = "";
+}
+
+
+  if(btn){
+    btn.addEventListener("click", handleAdicionar);
+    const parentForm = btn.closest && btn.closest("form");
+    if(parentForm){
+      parentForm.addEventListener("submit", function(e){
+        e.preventDefault();
+      });
+    }
+    console.log("Evento de clique registrado no botão.");
+  } else {
+    console.warn("Nenhum botão disponível para registrar evento. Você pode chamar manualmente handleAdicionar().");
+  }
+
+  window.addUser = function(nome, email, data){
+    lista.appendChild(criarCard(nome, email, data));
+    console.log("addUser executado manualmente:", nome, email, data);
+  };
+
+  console.log("Script pronto. Se nada aparecer ao clicar, abra o Console (F12) e verifique mensagens acima.");
+});
+</script>
+
+  </body>
+  <script src="js/script.js"></script>
 </html>
